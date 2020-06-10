@@ -1,3 +1,4 @@
+@import "config";
 //Menu button
 .menu-btn {
   position: absolute;
@@ -15,15 +16,21 @@
     @include easeOut;
   }
 
+  .btn-line {
+    &:nth-child(2) {
+      background: #900303;
+    }
+  }
+
   // Rotate Into an X with Menu lines
   &.close {
-    transform: rotate(180deg);
+    //Whole button does a 360 rotation and stops at 180 (or upside down)
+    transform: rotate(540deg);
 
     .btn-line {
-      //Line 1 - Rotate
+      //Line 1 - Rotate and color change
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
-        background: red;
       }
       //Line 2 - Hide
       &:nth-child(2) {
@@ -32,7 +39,109 @@
       // Line 3 - Rotate
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        background: #900303;
       }
     }
+  }
+}
+
+// Menu Overlay
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  //Link Side
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(darken($primary-color, 5), 0.9);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from the top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Branding Side
+  &-branding {
+    background: rgba(
+      $primary-color,
+      0.9
+    ); //Used an RGB scale to be able to change the opacity for the individual side
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from the bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: rgba(76, 175, 80, 0.1);
+      background: url("../images/250x333-cropped.jpg");
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+    &.show {
+      // Slide in from the right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
