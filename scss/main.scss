@@ -30,6 +30,7 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+    max-width: fit-content;
   }
 }
 
@@ -98,10 +99,18 @@ main {
 
   .job-1 {
     grid-area: job1;
+
+    h4 {
+      font-style: italic;
+    }
   }
 
   .job-2 {
     grid-area: job2;
+
+    p2 {
+      text-indent: 10px;
+    }
   }
 
   .job-3 {

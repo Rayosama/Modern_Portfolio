@@ -104,7 +104,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../images/background1.jpg);
+    background: url(../images/Laptop-1.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -131,7 +131,8 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(73, 73, 73, 0.5);
+    max-width: fit-content; }
 
 a {
   color: white;
@@ -175,8 +176,12 @@ main {
     font-size: 1.5rem; }
   .about-info .job-1 {
     grid-area: job1; }
+    .about-info .job-1 h4 {
+      font-style: italic; }
   .about-info .job-2 {
     grid-area: job2; }
+    .about-info .job-2 p2 {
+      text-indent: 10px; }
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
