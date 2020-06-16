@@ -181,6 +181,7 @@ main {
   }
 }
 
+// Dark Button
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
