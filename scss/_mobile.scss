@@ -93,8 +93,8 @@
   }
 
   .body {
-    #bg-img {
-      background: url(../dist/images/Laptop-1-SmallScreen.jpg);
+    body#bg-img {
+      background: black !important;
     }
   }
 }
