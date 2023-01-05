@@ -1,105 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/7b265cb8cb.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Welcome to my living project!</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/7b265cb8cb.js" crossorigin="anonymous"></script>
 
-    <!--Adding code to change link preview data-->
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Welcome to my living project!</title>
 
-    <!--The Image-->
-    <meta
-      name="image"
-      property="og:image"
-      content="https://i.postimg.cc/kMtw71Yg/Website-Main-Page.png"
-    />
+  <!--Adding code to change link preview data-->
 
-    <!-- The Author -->
-    <meta name="author" content="Joseph Kataya" />
+  <!-- This is a comment -->
 
-    <!--Type-->
-    <meta property="og:type" content="website" />
+  <!--The Image-->
+  <meta name="image" property="og:image" content="https://i.postimg.cc/kMtw71Yg/Website-Main-Page.png" />
 
-    <!--Website Link-->
-    <meta property="og:url" content="https://josephkataya.com/" />
+  <!-- The Author -->
+  <meta name="author" content="Joseph Kataya" />
 
-    <!--Description-->
-    <meta
-      property="og:description"
-      content="This is an on-going personal project, used to display myself and some of my work. If you have any recommendations please let me know, as they are highly encouraged! Whether it is adding a new feature, or a more efficient way to re-write my code to condense it, whatever you can think of. I appreciate your time and thank you for looking at my code!"
-    />
-  </head>
+  <!--Type-->
+  <meta property="og:type" content="website" />
 
-  <body id="bg-img">
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+  <!--Website Link-->
+  <meta property="og:url" content="https://josephkataya.com/" />
+
+  <!--Description-->
+  <meta property="og:description"
+    content="This is an on-going personal project, used to display myself and some of my work. If you have any recommendations please let me know, as they are highly encouraged! Whether it is adding a new feature, or a more efficient way to re-write my code to condense it, whatever you can think of. I appreciate your time and thank you for looking at my code!" />
+</head>
+
+<body id="bg-img">
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
       </div>
+      <ul class="menu-nav">
+        <li class="nav-item current">
+          <a href="index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">
+            About Me
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">
+            My Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">
+            How To Reach Me
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../Files/JosephKataya-Resume.pdf" download="JosephKataya_Resume" class="nav-link">Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              How To Reach Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="../Files/JosephKataya-Resume.pdf"
-              download="JosephKataya_Resume"
-              class="nav-link"
-              >Resume</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <main id="home">
+    <h1 class="lg-heading">
+      Joseph <span class="text-secondary">Kataya</span>
+    </h1>
+    <h2 class="sm-heading">
+      Junior Developer and Programmer
+    </h2>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/katayajoseph/" target="_blank">
+        <!-- Linked Link -->
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/Rayosama" target="_blank">
+        <!-- Github Link -->
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+    </div>
+  </main>
 
-    <main id="home">
-      <h1 class="lg-heading">
-        Joseph <span class="text-secondary">Kataya</span>
-      </h1>
-      <h2 class="sm-heading">
-        Junior Developer and Programmer
-      </h2>
-      <div class="icons">
-        <a href="https://www.linkedin.com/in/katayajoseph/" target="_blank">
-          <!-- Linked Link -->
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/Rayosama" target="_blank">
-          <!-- Github Link -->
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-      </div>
-    </main>
+  <script src="js/main.js"></script>
+</body>
 
-    <script src="js/main.js"></script>
-  </body>
 </html>
